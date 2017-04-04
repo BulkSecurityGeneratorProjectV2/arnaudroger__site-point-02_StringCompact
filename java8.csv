@@ -1,0 +1,26 @@
+"Benchmark","Mode","Threads","Samples","Score","Score Error (99.9%)","Unit","Param: encoding","Param: strType"
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,506.649691,5.545143,"ns/op",ISO_8859-1,LATIN1
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,505.618469,3.354762,"ns/op",ISO_8859-1,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,527.114630,8.024650,"ns/op",UTF-8,LATIN1
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,736.283924,3.604883,"ns/op",UTF-8,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,3133.099838,31.834739,"ns/op",UTF-16,LATIN1
+"org.github.arnaudroger.DecodingBenchmark.testDecoding","avgt",1,200,3115.995385,31.569853,"ns/op",UTF-16,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,139.183430,1.108114,"ns/op",ISO_8859-1,LATIN1
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,145.440651,2.394230,"ns/op",ISO_8859-1,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,642.897379,4.569449,"ns/op",UTF-8,LATIN1
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,856.994921,8.974286,"ns/op",UTF-8,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,1341.746552,18.413171,"ns/op",UTF-16,LATIN1
+"org.github.arnaudroger.EncodingBenchmark.testEncoding","avgt",1,200,1581.004611,182.084959,"ns/op",UTF-16,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.IndexOfBenchmark.indexOfChar","avgt",1,200,42.896100,1.041367,"ns/op",,LATIN1
+"org.github.arnaudroger.IndexOfBenchmark.indexOfChar","avgt",1,200,41.841896,1.381025,"ns/op",,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.IndexOfBenchmark.indexOfChar","avgt",1,200,38.920954,1.118690,"ns/op",,UTF16_UTF16_CHAR
+"org.github.arnaudroger.IndexOfBenchmark.indexOfCharStr","avgt",1,200,44.449487,0.020037,"ns/op",,LATIN1
+"org.github.arnaudroger.IndexOfBenchmark.indexOfCharStr","avgt",1,200,44.460319,0.014795,"ns/op",,UTF16_LATIN1_CHAR
+"org.github.arnaudroger.IndexOfBenchmark.indexOfCharStr","avgt",1,200,44.440601,0.016685,"ns/op",,UTF16_UTF16_CHAR
+"org.github.arnaudroger.Latin1ReaderBenchmark.byteBuffer","avgt",1,200,18733.384311,334.253550,"ns/op",,
+"org.github.arnaudroger.Latin1ReaderBenchmark.reader","avgt",1,200,22046.671575,414.078067,"ns/op",,
+"org.github.arnaudroger.ReaderBenchmark.reader","avgt",1,200,22701.335752,337.534579,"ns/op",UTF-8,
+"org.github.arnaudroger.ReaderBenchmark.reader","avgt",1,200,107812.515379,1876.680848,"ns/op",UTF-16,
+"org.github.arnaudroger.StringBuilderBenchmark.appendLatin1","avgt",1,200,59.027081,0.242767,"ns/op",,
+"org.github.arnaudroger.StringBuilderBenchmark.appendLatin1ThenUtf16","avgt",1,200,59.661337,0.499248,"ns/op",,
+"org.github.arnaudroger.StringBuilderBenchmark.appendUtf16","avgt",1,200,58.837091,0.366972,"ns/op",,
