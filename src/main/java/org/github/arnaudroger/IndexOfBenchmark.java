@@ -36,19 +36,4 @@ public class IndexOfBenchmark {
         return value.indexOf(strLookup);
     }
 
-    public static void main(String[] args) {
-        IndexOfBenchmark indexOfBenchmark = new IndexOfBenchmark();
-
-        check(indexOfBenchmark, StrType.LATIN1);
-        check(indexOfBenchmark, StrType.UTF16_LATIN1_CHAR);
-        check(indexOfBenchmark, StrType.UTF16_UTF16_CHAR);
-    }
-
-    private static void check(IndexOfBenchmark indexOfBenchmark, StrType strType) {
-        indexOfBenchmark.strType= strType;
-        indexOfBenchmark.setUp();
-        System.out.println("indexOfBenchmark.value = " + indexOfBenchmark.value);
-        System.out.println("indexOfBenchmark.lookup = " + indexOfBenchmark.lookup);
-        System.out.println("indexOfBenchmark.indexOfChar() = " + indexOfBenchmark.indexOfChar());
-    }
 }
