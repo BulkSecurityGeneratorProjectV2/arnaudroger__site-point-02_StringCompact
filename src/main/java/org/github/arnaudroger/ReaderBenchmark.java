@@ -9,7 +9,6 @@ import org.openjdk.jmh.infra.Blackhole;
 
 import java.io.File;
 import java.io.FileOutputStream;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
@@ -24,12 +23,12 @@ public class ReaderBenchmark {
 
     @Param({"UTF-8", "UTF-16"})
     public String encoding;
-    
+
     File file;
     Charset charset;
     @Setup
     public void setUp() throws IOException {
-        
+
         charset = Charset.forName(encoding);
         file = File.createTempFile("ReaderBenchmark-", ".txt");
 
@@ -41,8 +40,8 @@ public class ReaderBenchmark {
             }
         }
     }
-    
-    
+
+
     @Benchmark
     public void reader(Blackhole blackhole) throws IOException {
         try (FileChannel channel = FileChannel.open(file.toPath())) {
@@ -55,6 +54,11 @@ public class ReaderBenchmark {
             }
         }
     }
-    
+
+
+    public static void main(String[] args) {
+        char c = 'ÿ';
+        System.out.println("'ÿ' = " + ((int)'ÿ') + "/" + "ÿ".codePointAt(0));
+    }
 
 }
