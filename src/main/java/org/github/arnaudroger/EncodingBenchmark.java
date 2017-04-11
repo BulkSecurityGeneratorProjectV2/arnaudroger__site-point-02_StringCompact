@@ -12,7 +12,7 @@ import java.nio.charset.Charset;
 
 @State(Scope.Benchmark)
 public class EncodingBenchmark {
-    
+
 
     @Param({"LATIN1", "UTF16_LATIN1_CHAR"})
     public StrType strType;
@@ -21,7 +21,7 @@ public class EncodingBenchmark {
     public String encoding;
 
     public String value;
-    
+
     private Charset charset;
 
     @Setup
@@ -35,6 +35,13 @@ public class EncodingBenchmark {
         return value.getBytes(charset);
     }
 
+    public static void main(String[] args) {
+        EncodingBenchmark encodingBenchmark = new EncodingBenchmark();
+        encodingBenchmark.encoding = "UTF-16";
+        encodingBenchmark.strType = StrType.UTF16_LATIN1_CHAR;
+        encodingBenchmark.setUp();
 
+        encodingBenchmark.testEncoding();
+    }
 
 }

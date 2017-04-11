@@ -19,10 +19,15 @@ public class IndexOfBenchmark {
     @Param({"LATIN1", "UTF16_LATIN1_CHAR", "UTF16_UTF16_CHAR" })
     public StrType strType;
 
+    @Param({"1", "150" })
+    public int lookupPosition ;
     @Setup
     public void setUp() {
         value = strType.value();
-        lookup = strType.lookup();
+        lookup = value.charAt(lookupPosition);
+        if (lookupPosition != value.indexOf(lookup)) {
+            throw new IllegalArgumentException("Invalid lookupPosition " + lookupPosition + " matches first index  " +value.indexOf(lookup) );
+        }
         strLookup = "" + lookup;
     }
 
