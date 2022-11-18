@@ -15,6 +15,7 @@ import java.io.Reader;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
 
 @State(Scope.Benchmark)
 public class ReaderBenchmark {
@@ -30,7 +31,7 @@ public class ReaderBenchmark {
     public void setUp() throws IOException {
 
         charset = Charset.forName(encoding);
-        file = File.createTempFile("ReaderBenchmark-", ".txt");
+        file = Files.createTempFile("ReaderBenchmark-", ".txt").toFile();
 
         try (FileOutputStream fos = new FileOutputStream(file)) {
             try (OutputStreamWriter writer = new OutputStreamWriter(fos, charset)) {

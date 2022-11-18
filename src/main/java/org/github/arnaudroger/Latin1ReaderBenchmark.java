@@ -16,6 +16,7 @@ import java.nio.ByteBuffer;
 import java.nio.channels.Channels;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
+import java.nio.file.Files;
 
 @State(Scope.Benchmark)
 public class Latin1ReaderBenchmark {
@@ -30,7 +31,7 @@ public class Latin1ReaderBenchmark {
     public void setUp() throws IOException {
         
         charset = Charset.forName(encoding);
-        file = File.createTempFile("Latin1ReaderBenchmark-", ".txt");
+        file = Files.createTempFile("Latin1ReaderBenchmark-", ".txt").toFile();
 
         try (FileOutputStream fos = new FileOutputStream(file)) {
             try (OutputStreamWriter writer = new OutputStreamWriter(fos, charset)) {
